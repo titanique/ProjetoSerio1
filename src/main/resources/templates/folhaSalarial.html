@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+<title>Folha Salarial</title>
+
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+function soma(b) {
+	var x;
+    return x = x + b;
+}
+document.getElementById("demo").innerHTML = myFunction(10, 2); 
+</script>
+<table>
+  <thead>
+    <tr>
+      <th th:text="nome">Name</th>
+      <th th:text="salario">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="comissao: ${comissao}">
+      <td th:text="${comissao.nome}">Oranges</td>
+      <td th:text="${#numbers.formatDecimal(comissao.salario, 1, 2)}">0.99</td>
+      <td th:text="${#numbers.formatDecimal(comissao.salario, 1, 2)}">0.99</td>
+ 
+    </tr>
+    
+  </tbody>
+  <tbody>
+    <tr th:each="jogador: ${jogador}">
+      <td th:text="${jogador.nome}">Oranges</td>
+      <td th:text="${#numbers.formatDecimal(jogador.salario, 1, 2)}">0.99</td>
+    </tr>
+    
+  </tbody>
+  
+  
+</table>
+
+
+    <form th:action="@{/menu}" method="get">
+	<input type="submit" value="Voltar" />
+	</form>
+
+<br />
+<br />
+
+</body>
+    
+</html>

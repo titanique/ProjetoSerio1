@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th th:text="nome">Name</th>
+      <th th:text="funcao">Name</th>
+      <th th:text="salario">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="comissao: ${comissao}">
+      <td th:text="${comissao.nome}">Oranges</td>
+       <td th:text="${comissao.funcao}">Oranges</td>
+       
+      <td th:text="${#numbers.formatDecimal(comissao.salario, 1, 2)}">0.99</td>
+    </tr>
+    
+  </tbody>
+</table>
+<br />
+<br />
+<form th:action="@{/menu}" method="get">
+	<input type="submit" value="Voltar" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+	<h1>Olá, mangola!</h1>
+
+
+	<br />
+	<form th:action="@{/comissao}" method="get" >
+	<input type="submit" value="Ver Comissao" />
+	</form>
+	<br />
+	<form th:action="@{/jogadores}" method="get" >
+	<input type="submit" value="Ver Jogadores" />
+	</form>
+	<br />
+	<form th:action="@{/clube}" method="get" >
+	<input type="submit" value="Ver Clube" />
+	</form>
+	<br />
+	<form th:action="@{/addcomissao}" method="get" >
+	<input type="submit" value="Adiciona Na Comissao" />
+	</form>
+	<br />
+	<form th:action="@{/folhaSalarial}" method="get" >
+	<input type="submit" value="Mostrar Folha Salarial" />
+	</form>
+	<br />
+	<form th:action="@{/addjogadores}" method ="get">
+	<input type="submit" value="Adiciona no Plantel" />
+	</form>
+	<br />
+	<form th:action="@{/logout}" method ="post">
+	<input type="submit" value="Deslogar" />
+	</form>
+	<br />
+	<form th:action="@{/home}" method="get">
+	<input type="submit" value="Voltar" />
+	</form>
+
+
+</body>
+</html>

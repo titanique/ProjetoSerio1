@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+<title>Adiciona Comissao</title>
+</head>
+<body>
+	<form action="#" th:action="@{/addjogadores}" th:object="${jogadornovo}" method="post">
+    	<p>Nome: <input type="text" th:field="*{nome}" /></p>
+        <p>Funcao: <input type="text" th:field="*{funcao}" /></p>
+        <p>Salario: <input type="text" th:field="*{salario}" /></p>
+        <p>Idade: <input type="text" th:field="*{idade}" /></p>
+        <p>Posição: <input type="text" th:field="*{posicao}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+    
+    <form th:action="@{/menu}" method="get">
+	<input type="submit" value="Voltar" />
+	</form>
+</body>
+
+</html>
